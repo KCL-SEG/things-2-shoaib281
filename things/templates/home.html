@@ -6,7 +6,9 @@
   <h1>Things</h1>
   <form method="post" action="{% url 'home' %}">
     {% csrf_token %}
-    {{ form.as_p }}
+    {{ form.name.label_tag }} {{ form.name }}
+    {{ form.description.label_tag }} {{ form.description }}
+    {{ form.quantity.label_tag }} {{ form.quantity }}
     <button type="submit">Submit</button>
   </form>
 </body>
